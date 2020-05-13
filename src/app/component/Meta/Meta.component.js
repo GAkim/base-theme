@@ -59,8 +59,10 @@ export default class Meta extends PureComponent {
 
         if (!canonical_url) return null;
 
+        const canonicalWithoutIndex = canonical_url.replace('index.php/', '');
+
         return (
-            <link rel="canonical" href={ canonical_url } />
+            <link rel="canonical" href={ canonicalWithoutIndex  } />
         );
     }
 
